@@ -18,16 +18,16 @@ So by creating CRUD with REST API create to route with two models and create the
 
 #### LInkS:
 
-[deployed the dev](https://basic-api-server-rujeenadev.herokuapp.com/)
+[deployed the dev](https://api-server-rujeena.herokuapp.com/)
 
 
-[deployed the main](https://basic-api-server-main.herokuapp.com/)
+[deployed the main](https://api-foodclothes-server.herokuapp.com/)
 
 
-[ Github Actions](https://github.com/rujeenaal-zyoud/basic-api-server/actions/workflows/node.js.yml)
+[ Github Actions](https://github.com/rujeenaal-zyoud/api-server/actions/workflows/node.js.yml)
 
 
-[PR](https://github.com/rujeenaal-zyoud/basic-api-server/pull/1)
+[PR](https://github.com/rujeenaal-zyoud/api-server/pull/2)
 
 ---------------------------------------------
 ### UML
