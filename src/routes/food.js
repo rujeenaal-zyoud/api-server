@@ -1,12 +1,12 @@
 'use strict';
 //HERE WE WILL CREATE THE REQUEST FOR CRUD using RESTAPI 
 const express = require('express');
-const foodsModel = require('../models/food.js');
+//const foodsModel = require('../models/food.js');
 //const validator = require('../middleware/validator')
 const DataCollection = require('../models/data-collection-class');
 const router = express.Router();
 //foods here that in model class that we create
-const foods = new DataCollection(foodsModel);
+const foods = new DataCollection("food");
 
 
 //create requests
@@ -21,7 +21,7 @@ async function getfoods(req, res,next) {
     try {
 
         const resObj =  await foods.read(req.params.id);
-        res.json(resObj);
+        res.json(resObj.rows);
     }
     catch (e) {
         next(e);
@@ -32,18 +32,13 @@ async function createfoods(req, res,next) {
     try {
 
         const resObj =  await foods.create(req.body);
-        res.status(201).json(resObj)
+        res.status(201).json(resObj.rows[0])
     }
     catch (e) {
         next(e);
     }
 }
 
-// const  createfoods =async (req,res)=>{
-//     const resObj =  await foods.create(req.body);
-//     res.status(201).json(resObj)
-
-// }
 
 
  async function updatfoods(req, res,next) {
@@ -51,7 +46,7 @@ async function createfoods(req, res,next) {
     try {
 
         const resObj =  await foods.update(req.params.id, req.body);
-        res.json(resObj);
+        res.json(resObj.row[0]);
     }
     catch (e) {
         next(e);
@@ -65,7 +60,7 @@ async function deletefoods(req, res,next) {
     try {
 
         const resObj =  await foods.delete(req.params.id);
-        res.json(resObj);
+        res.json(resObj.rows[0]);
     }
     catch (e) {
         next(e);
