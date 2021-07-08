@@ -20,18 +20,18 @@ let id;
     expect(response2.status).toBe(404);
   });
   
-  it('create a new clothes using POST', async ()=>{
+  // it('create a new clothes using POST', async ()=>{
 
-    let clothes={
-        typeIt: 'shirt',
-      nameIt: 'red',
-    };
+  //   let clothes={
+  //       typeIt: 'shirt',
+  //     nameIt: 'red',
+  //   };
  
-    const response=await request.post('/api/v1/clothes').send(clothes);
+  //   const response=await request.post('/api/v1/clothes').send(clothes);
   
-    expect(response.status).toEqual(201);
+  //   expect(response.status).toEqual(201);
    
-  });
+  // });
 
 
 
@@ -74,11 +74,11 @@ describe('food ', ()=>{
       expect(response.status).toEqual(201);
     
     });
-    it(' read a list of food  using GET',async()=>{
-      const response =await request.get('/api/v1/food');
-      expect(Array.isArray(response.body)).toBeTruthy();
+    // it(' read a list of food  using GET',async()=>{
+    //   const response =await request.get('/api/v1/food');
+    //   expect(Array.isArray(response.body)).toBeTruthy();
      
-    });
+    // });
   
   
     it('Update a food using PUT', async () => {
