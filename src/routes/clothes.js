@@ -1,7 +1,7 @@
 'use strict';
 //HERE WE WILL CREATE THE REQUEST FOR CRUD using RESTAPI 
 const express = require('express');
-const clothesModel = require('../models/clothes.js');
+//const clothesModel = require('../models/clothes.js');
 const dataCollection = require('../models/data-collection-class');
 const router = express.Router();
 //Clothes here that in model class that we create

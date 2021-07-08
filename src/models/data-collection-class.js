@@ -16,10 +16,16 @@ read(id){
 
 }
 create(obj){
-const sql =`INSERT INTO ${this.table} (typeClothes,color) VALUES ($1,$2) RETURNING *`;
+const sql =` INSERT INTO ${this.table} (typeIt,nameIt) VALUES ($1,$2) RETURNING *;`;
 const saveObject = [obj.typeIt ,obj.nameIt]
+// console.log(saveObject);
 return pool.query(sql,saveObject);
 }
+
+
+
+
+
 
 update(id,obj){
   const sql =`UPDATE ${this.table} SET name=$1,role=$2 WHERE id=$3 RETURNING *;`;
